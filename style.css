@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+:root{
+    
+--DesaturatedRed: hsl(0, 36%, 70%);
+--SoftRed: hsl(0, 93%, 68%);
+--DarkGrayishRed: hsl(0, 6%, 24%);
+
+--Linear1: 135deg, from hsl(0, 0%, 100%),  hsl(0, 100%, 98%);
+--Linear: 135deg, from hsl(0, 80%, 86%),  hsl(0, 74%, 74%);
+
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url(./images/bg-pattern-desktop.svg);
+   
+    background-size: cover;
+    background-repeat: no-repeat;
+      font-family: 'Josefin Sans', sans-serif;
+    font-size: 16px;
+    
+    
+}
+header{
+    margin-top: 2rem;
+    margin-left: 1rem;
+    margin-bottom: 2rem;
+}
+section{
+    text-align: center;
+    padding: 1rem;
+}
+h1{
+    margin-top: 2rem;
+    font-weight: 600;
+    color: var(--DarkGrayishRed);
+    font-size: 5rem;
+}
+span {
+    color: var(--DesaturatedRed);
+}
+picture img{
+    width: 100%;
+}
+span{
+    color: var(--DesaturatedRed);
+    font-weight: 300;
+}
+p{font-size: 400;
+color: var(--DesaturatedRed);
+}
+
+form{
+    margin-top: 50px;
+    position: relative;
+}
+.form-control{
+    text-align: left;
+    width: 100%;
+}
+input{
+    padding-left: 2rem;
+
+}
+.form-control input {
+    border:1px solid var(--DesaturatedRed);
+    border-radius: 50px;
+    width: 95%;
+    height: 50px;
+    outline: none;
+}
+input::placeholder{
+    color: var(--DesaturatedRed);
+}
+
+.form-control i{
+    position: absolute;
+    top: 15px;
+    right: 100px;
+    visibility: hidden;
+}
+
+
+button{
+    background:linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    position: absolute;
+    width: 20%;
+    height: 50px;
+    border-radius: 50px;
+    border: none;
+    top: 0px;
+    right:0px ;
+    box-shadow: 0px 10px 30px -5px var(--DesaturatedRed);
+}
+
+button:active{
+    background: linear-gradient(135deg,hsl(0, 100%,96%),hsl(0, 90%,84%));
+}
+
+#text0{
+    margin: 2rem;
+    color: var(--SoftRed);
+}
+@media screen and (min-width:900px) {
+body{
+    overflow-y: hidden;
+}
+  
+main{
+    
+   
+    display: grid;
+    grid-template-areas: "l r";
+    grid-template-columns: auto 40%;
+    grid-template-rows: none;
+    gap: 100px;
+    padding-left: 200px;
+    position: relative;
+    overflow-y: hidden;
+}
+header section{
+    grid-area: l;
+    
+}
+section{
+    position: absolute;
+  text-align: left;
+    width: 450px;
+    top: 230px;
+    left: 200px;
+}
+header{
+    
+    width: 400px;
+}
+h1{
+    font-size: 100px;
+}
+header{
+    padding-top: 5rem;
+}
+picture{ 
+    
+    grid-area: r;
+}
+
+main  picture img{
+    
+    min-height: 100vh;
+}
+
+}
